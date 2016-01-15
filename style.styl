@@ -1,0 +1,67 @@
+background-color = #ecf0f1
+navbar-font = white
+nav-button-background = #e74c3c
+nav-button-hover-background = #c0392b
+main-img-width = 500px
+
+body
+	margin 0
+	padding 0
+	background background-color
+	box-sizing border-box
+
+.navbar, img, p, h1
+	padding 20px
+
+
+.horizontal-list-ul
+	padding 0
+	li
+		display block
+		margin auto
+		background nav-button-background
+		height 3vh
+		&:hover
+			background nav-button-hover-background
+		
+	a
+		height 10%
+		text-decoration none
+		color navbar-font
+		width 100%
+		text-align center
+
+		
+
+.main-img
+	display block
+	margin auto
+	@media all and (max-width: main-img-width)
+			&
+				width: 89vw 
+
+.gallery-img
+	display block
+	margin auto
+	margin-bottom 5px
+
+@media all and (min-width: 500px)
+	.navbar
+		text-align center
+	.horizontal-list-ul
+		width 60vw
+		text-align center
+		background nav-button-background
+		margin auto
+		& li
+			display inline-block
+			width (@width/7)
+			padding 1vw
+
+@media all and (min-width: 960px)
+	.horizontal-list-ul
+		width 960px
+
+@media all and (min-width: 590px)
+	.gallery-img
+		display inline-block
